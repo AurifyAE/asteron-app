@@ -39,7 +39,7 @@
 
 
   <style>
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 600px) {
       body {
         display: flex;
         flex-direction: column;
@@ -59,7 +59,8 @@
       }
 
       .logo img {
-        width: 70%;
+        width: 200px;
+        margin-top: 60px;
       }
 
       .logo .support {
@@ -125,6 +126,93 @@
       }
     }
 
+    @media only screen and (min-width: 600px) {
+      body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+      }
+
+      .logo {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo .profile-pic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo img {
+        width: 320px;
+        margin-top: 90px;
+      }
+
+      .logo .support {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+      }
+
+      .logo .support p {
+        font-size: 18px;
+        margin-bottom: 0px;
+      }
+
+      .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        padding: 0;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(250, 250, 250, 0.9);
+        width: 290px;
+        height: 200px;
+        margin: 7px;
+        border-radius: 15px;
+        padding: 25px;
+        padding-top: 25px;
+      }
+
+      .icon {
+        font-size: 30px;
+        color: white;
+        background-color: #C49A6C;
+        border-radius: 50%;
+        padding: 12px;
+      }
+
+      p {
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      .card p:last-child {
+        font-size: 30px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #C49A6C;
+        outline: none;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: #C49A6C;
+      }
+    }
+
 
     body {
       margin: 0;
@@ -148,7 +236,7 @@
 <body>
   <div class="logo">
     <div class="profile-pic">
-      <img src="./asteron.-3d..png" alt="" style="width: 200px; margin-top: 60px;">
+      <img src="./asteron.-3d..png" alt="">
     </div>
     <div class="support">
       <p>Customer Support</p>

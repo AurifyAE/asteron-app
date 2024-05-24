@@ -39,7 +39,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
   <style>
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 600px) {
       body {
         display: flex;
         justify-content: center;
@@ -77,11 +77,21 @@
         margin-top: 20%;
       }
 
-      table{
+      img{
+        width: 200px;
+        margin-top: 25px;
+      }
+
+      span{
+        color: #fff;
+        font-size: medium;
+      }
+
+      table {
         margin-top: 15px;
       }
 
-      table thead tr{
+      table thead tr {
         background-color: #0A1839;
         border-bottom: 7px solid #C49A6C;
         font-size: 18px;
@@ -89,11 +99,11 @@
         color: #fff;
       }
 
-      table thead tr th{
+      table thead tr th {
         padding: 5px 10px;
       }
 
-      table tbody tr td{
+      table tbody tr td {
         color: #fff;
         font-size: 16px;
         padding: 10px;
@@ -240,6 +250,221 @@
 
     }
 
+    @media only screen and (min-width: 600px) {
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .main {
+        padding: 0px;
+      }
+
+      .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .label {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        color: #005043;
+        width: 100%;
+        margin-top: 12px;
+      }
+
+      .main-content {
+        margin-top: 20%;
+      }
+
+      img{
+        width: 300px;
+        margin-top: 0px;
+      }
+
+      span{
+        color: #fff;
+        font-size: 30px;
+      }
+
+      table {
+        margin-top: 15px;
+      }
+
+      table thead tr {
+        background-color: #0A1839;
+        border-bottom: 7px solid #C49A6C;
+        font-size: 30px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      table thead tr th {
+        padding: 5px 10px;
+      }
+
+      table tbody tr td {
+        color: #fff;
+        font-size: 30px;
+        padding: 10px;
+      }
+
+      .data {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      .symbols {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #0A1839;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+        border-bottom: 7px solid #C49A6C;
+        width: 100%;
+        padding: 10px;
+        height: 65px;
+        padding-left: 30px;
+        border-radius: 10px;
+      }
+
+      .symbols .buy-label {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .symbols .sell-label {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .symbols .sell-label p,
+      .symbols .buy-label p {
+        font-size: 30px;
+        font-weight: 600;
+        margin-right: 8px
+      }
+
+      .symbols .sell-label .icon,
+      .symbols .buy-label .icon {
+        font-size: 30px;
+        font-weight: 600;
+        margin-top: 7px;
+      }
+
+      .buy {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 10px;
+      }
+
+      .buy div:last-child,
+      .sell div:last-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        border-radius: 5px;
+      }
+
+      .buy .label,
+      .sell .label {
+        background-color: transparent;
+        padding: 0px;
+      }
+
+      .buy .icon {
+        font-size: 1.5rem;
+        margin-top: -10px;
+        padding: 0;
+        color: red;
+      }
+
+      .sell .icon {
+        font-size: 1.5rem;
+        margin-top: -7px;
+        padding: 0;
+        color: green;
+      }
+
+
+      .gold {
+        font-size: 30px;
+        border-radius: 10px;
+      }
+
+      .gold .label p {
+        font-size: 35px;
+        font-weight: 600;
+      }
+
+      .silver .label p {
+        font-size: 35px;
+        font-weight: 600;
+      }
+
+      .gold .buy div:first-child,
+      .gold .sell div:first-child {
+        font-size: 30px;
+      }
+
+      .gold .buy div:last-child,
+      .gold .sell div:last-child {
+        font-size: 30px;
+      }
+
+      .silver {
+        font-size: 20px;
+
+        border-radius: 10px;
+      }
+
+      .silver .buy div:first-child,
+      .silver .sell div:first-child {
+        font-size: 30px;
+      }
+
+      .silver .buy div:last-child,
+      .silver .sell div:last-child {
+        font-size: 30px;
+      }
+
+      .gold .label,
+      .silver .label {
+        width: 150px;
+      }
+
+
+      .table-row .data {
+        border-radius: 10px;
+      }
+
+      .input-box{
+        padding: 20px;
+      }
+
+    }
+
     body {
       margin: 0;
       padding: 0px;
@@ -290,14 +515,14 @@
 <body class="d-flex justify-content-center align-items-center">
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <div class="col-lg-4 d-flex justify-content-center">
-      <img class="logo" src="./asteron.-3d..png" alt="" style="width: 200px; margin-top: 25px;">
+      <img class="logo" src="./asteron.-3d..png" alt="">
     </div>
     <!-- Navbar -->
     <nav class="d-flex justify-content-center">
       <div id="navbar">
         <ul class="navbar-nav  ">
           <li class="nav-item d-flex align-items-center">
-            <div class="btn btn-outline btn-sm" style="color: white;font-size: medium;" target="_blank"><span
+            <div class="btn btn-outline btn-sm" target="_blank"><span
                 id='time'></span></div>
           </li>
         </ul>
