@@ -39,432 +39,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
   <style>
-    @media only screen and (max-width: 600px) {
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 0px;
-        margin: 0px;
-      }
-
-      .main {
-        padding: 0px;
-      }
-
-      .row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 0px;
-        margin: 0px;
-      }
-
-      .label {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
-        color: #005043;
-        width: 100%;
-        margin-top: 12px;
-      }
-
-      .main-content {
-        margin-top: 20%;
-      }
-
-      img {
-        width: 200px;
-        margin-top: 25px;
-      }
-
-      span {
-        color: #fff;
-        font-size: medium;
-      }
-
-      table {
-        margin-top: 15px;
-      }
-
-      table thead tr {
-        background-color: #0A1839;
-        border-bottom: 7px solid #C49A6C;
-        font-size: 18px;
-        font-weight: 600;
-        color: #fff;
-      }
-
-      table thead tr th {
-        padding: 5px 10px;
-      }
-
-      table tbody tr td {
-        color: #fff;
-        font-size: 16px;
-        padding: 10px;
-      }
-
-      .data {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: rgba(255, 255, 255, 0.9);
-        width: 100%;
-        padding: 10px;
-        margin-top: 10px;
-      }
-
-      .symbols {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: #0A1839;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
-        border-bottom: 7px solid #C49A6C;
-        width: 100%;
-        padding: 10px;
-        height: 46px;
-        padding-left: 30px;
-        border-radius: 10px;
-      }
-
-      .symbols .buy-label {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-      }
-
-      .symbols .sell-label {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-      }
-
-      .symbols .sell-label p,
-      .symbols .buy-label p {
-        font-size: 18px;
-        font-weight: 600;
-        margin-right: 8px
-      }
-
-      .symbols .sell-label .icon,
-      .symbols .buy-label .icon {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 7px;
-      }
-
-      .buy {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-right: 10px;
-      }
-
-      .buy div:last-child,
-      .sell div:last-child {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 5px;
-        border-radius: 5px;
-      }
-
-      .buy .label,
-      .sell .label {
-        background-color: transparent;
-        padding: 0px;
-      }
-
-      .buy .icon {
-        font-size: 1.5rem;
-        margin-top: -10px;
-        padding: 0;
-        color: red;
-      }
-
-      .sell .icon {
-        font-size: 1.5rem;
-        margin-top: -7px;
-        padding: 0;
-        color: green;
-      }
-
-
-      .gold {
-        font-size: 20px;
-        border-radius: 10px;
-      }
-
-      .gold .label p {
-        font-size: 24px;
-        font-weight: 600;
-      }
-
-      .silver .label p {
-        font-size: 20px;
-        font-weight: 600;
-      }
-
-      .gold .buy div:first-child,
-      .gold .sell div:first-child {
-        font-size: 18px;
-      }
-
-      .gold .buy div:last-child,
-      .gold .sell div:last-child {
-        font-size: 18px;
-      }
-
-      .silver {
-        font-size: 20px;
-
-        border-radius: 10px;
-      }
-
-      .silver .buy div:first-child,
-      .silver .sell div:first-child {
-        font-size: 14px;
-      }
-
-      .silver .buy div:last-child,
-      .silver .sell div:last-child {
-        font-size: 14px;
-      }
-
-      .gold .label,
-      .silver .label {
-        width: 80px;
-      }
-
-
-      .table-row .data {
-        border-radius: 10px;
-      }
-
-    }
-
-    @media only screen and (min-width: 600px) {
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 0px;
-        margin: 0px;
-      }
-
-      .main {
-        padding: 0px;
-      }
-
-      .row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 0px;
-        margin: 0px;
-      }
-
-      .label {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
-        color: #005043;
-        width: 100%;
-        margin-top: 12px;
-      }
-
-      .main-content {
-        margin-top: 20%;
-      }
-
-      img {
-        width: 300px;
-        margin-top: 0px;
-      }
-
-      span {
-        color: #fff;
-        font-size: 30px;
-      }
-
-      table {
-        margin-top: 15px;
-      }
-
-      table thead tr {
-        background-color: #0A1839;
-        border-bottom: 7px solid #C49A6C;
-        font-size: 30px;
-        font-weight: 600;
-        color: #fff;
-      }
-
-      table thead tr th {
-        padding: 5px 10px;
-      }
-
-      table tbody tr td {
-        color: #fff;
-        font-size: 30px;
-        padding: 10px;
-      }
-
-      .data {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: rgba(255, 255, 255, 0.9);
-        width: 100%;
-        padding: 10px;
-        margin-top: 10px;
-      }
-
-      .symbols {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: #0A1839;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
-        border-bottom: 7px solid #C49A6C;
-        width: 100%;
-        padding: 10px;
-        height: 65px;
-        padding-left: 30px;
-        border-radius: 10px;
-      }
-
-      .symbols .buy-label {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-      }
-
-      .symbols .sell-label {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-      }
-
-      .symbols .sell-label p,
-      .symbols .buy-label p {
-        font-size: 30px;
-        font-weight: 600;
-        margin-right: 8px
-      }
-
-      .symbols .sell-label .icon,
-      .symbols .buy-label .icon {
-        font-size: 30px;
-        font-weight: 600;
-        margin-top: 7px;
-      }
-
-      .buy {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-right: 10px;
-      }
-
-      .buy div:last-child,
-      .sell div:last-child {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 5px;
-        border-radius: 5px;
-      }
-
-      .buy .label,
-      .sell .label {
-        background-color: transparent;
-        padding: 0px;
-      }
-
-      .buy .icon {
-        font-size: 1.5rem;
-        margin-top: -10px;
-        padding: 0;
-        color: red;
-      }
-
-      .sell .icon {
-        font-size: 1.5rem;
-        margin-top: -7px;
-        padding: 0;
-        color: green;
-      }
-
-
-      .gold {
-        font-size: 30px;
-        border-radius: 10px;
-      }
-
-      .gold .label p {
-        font-size: 35px;
-        font-weight: 600;
-      }
-
-      .silver .label p {
-        font-size: 35px;
-        font-weight: 600;
-      }
-
-      .gold .buy div:first-child,
-      .gold .sell div:first-child {
-        font-size: 30px;
-      }
-
-      .gold .buy div:last-child,
-      .gold .sell div:last-child {
-        font-size: 30px;
-      }
-
-      .silver {
-        font-size: 20px;
-
-        border-radius: 10px;
-      }
-
-      .silver .buy div:first-child,
-      .silver .sell div:first-child {
-        font-size: 30px;
-      }
-
-      .silver .buy div:last-child,
-      .silver .sell div:last-child {
-        font-size: 30px;
-      }
-
-      .gold .label,
-      .silver .label {
-        width: 150px;
-      }
-
-
-      .table-row .data {
-        border-radius: 10px;
-      }
-
-      .input-box {
-        padding: 20px;
-      }
-
-    }
-
     body {
       margin: 0;
       padding: 0px;
@@ -480,41 +54,218 @@
       -ms-animation: 20s linear 0s normal none infinite animate;
       -o-animation: 20s linear 0s normal none infinite animate;
       animation: 20s linear 0s normal none infinite animate;
-      color: #005043;
       height: 100vh;
       /* Adjusted to 100vh for full viewport height */
       width: 100%;
     }
 
-    .rate-card {
-      display: none;
+    .logo {
+      width: 300px;
+      margin-top: 30px;
     }
 
-
     .date-time {
+      color: #fff;
+      font-size: 35px;
+    }
+
+    .spotrate {
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    .spotrate .symbols {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      color: #005043;
-      margin-top: 20px;
-      margin-left: 150px;
+      background-color: #0A1839;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+      padding: 10px;
+      border-radius: 20px;
+      height: 65px;
+      width: 100%;
+      border-bottom: 7px solid #C49A6C;
     }
 
-    .date-time h3 {
-      font-size: 3vw;
+    .spotrate .symbols .buy-sell-label {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .spotrate .symbols .buy-sell-label p,
+    .spotrate .symbols .buy-sell-label .icon {
+      color: #e9af0e;
+      font-size: 26px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .spotrate .gold {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #fff;
+      margin-top: 15px;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    .spotrate .gold .label {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .spotrate .gold .label p {
+      font-size: 35px;
+      font-weight: 600;
+      color: #000435;
+    }
+
+    .spotrate .gold .label h5 {
+      color: #000435;
+    }
+
+    .spotrate .buy-sell .input-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      font-size: 40px;
+    }
+
+    .spotrate .buy-sell label {
+      font-size: 24px;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    table thead tr {
+      background-color: #0A1839;
+      border-bottom: 7px solid #C49A6C;
+    }
+
+    table thead tr th {
+      color: #fff;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    table tbody tr {
+      border-bottom: 10px solid transparent;
+      background-clip: padding-box;
+    }
+
+    /* table tbody tr:nth-child(odd) {
+      background-color: #fff;
+    }
+
+    table tbody tr:nth-child(even) {
+      background-color: #d1d1d1;
+    } */
+
+    table tbody tr td {
+      font-size: 35px;
+      text-align: center;
+      color: #fff;
       font-weight: 600;
     }
 
-    .fading-label {
-      transition: color 1s ease;
-      /* Adjust the duration and timing function as needed */
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+      body {
+        width: 100%;
+        padding: 0px 0px;
+      }
+
+      .logo {
+        width: 200px;
+        margin-top: 70px;
+      }
+
+      .date-time {
+        font-size: 20px;
+      }
+
+      .spotrate .symbols {
+        height: 50px;
+      }
+
+      .spotrate .symbols .buy-sell-label p,
+      .spotrate .symbols .buy-sell-label .icon {
+        font-size: 16px;
+      }
+
+      .spotrate .symbols .buy-sell-label .icon {
+        margin-bottom: 10px;
+      }
+
+      .spotrate .gold .label p {
+        font-size: 20px;
+      }
+
+      .spotrate .buy-sell .input-box {
+        font-size: 20px;
+      }
+
+      .spotrate .buy-sell label {
+        font-size: 14px;
+      }
+
+      table thead tr th {
+        font-size: 20px;
+      }
+
+      table tbody tr td {
+        font-size: 18px;
+      }
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      body {
+        padding: 0px 20px;
+      }
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      body {
+        padding: 0px 20px;
+      }
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      body {
+        padding: 0px 20px;
+      }
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+      body {
+        padding: 0px 300px;
+      }
+    }
+
+    .rate-card {
+      display: none;
     }
   </style>
 </head>
 
 <body class="d-flex justify-content-center align-items-center">
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-    <div class="col-lg-4 d-flex justify-content-center">
+    <div class="col-lg-12 d-flex justify-content-center">
       <img class="logo" src="./asteron.-3d..png" alt="">
     </div>
     <!-- Navbar -->
@@ -522,23 +273,23 @@
       <div id="navbar">
         <ul class="navbar-nav  ">
           <li class="nav-item d-flex align-items-center">
-            <div class="btn btn-outline btn-sm" target="_blank"><span id='time'></span></div>
+            <div class="btn btn-outline btn-sm" target="_blank"><span id='time' class="date-time "></span></div>
           </li>
         </ul>
       </div>
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid pt-0">
-      <div class="row">
+      <div class="spotrate">
         <div class="symbols">
           <div></div>
-          <div class="buy-label">
+          <div class="buy-sell-label">
             <p style="color: #fff;">BUY</p>
             <div>
               <i class="fa-solid fa-dollar-sign icon" style="color: #fff;"></i>
             </div>
           </div>
-          <div class="sell-label">
+          <div class="buy-sell-label">
             <p style="color: #fff;">SELL</p>
             <div>
               <i class="fa-solid fa-dollar-sign icon" style="color: #fff;"></i>
@@ -548,19 +299,19 @@
 
 
         <!-- GOLD -->
-        <div class="data gold">
+        <div class="gold">
           <div class="label">
             <p style="color: #0A1839;">Gold</p>
             <h5 style="color: #0A1839;">oz</h5>
           </div>
-          <div class="buy">
+          <div class="buy-sell">
             <div class="form-control input-box" id="goldInputLow"></div>
             <div>
               <i class="fa-solid fa-caret-down icon"></i>
               <label id="lowLabelGold">0</label>
             </div>
           </div>
-          <div class="sell">
+          <div class="buy-sell">
             <div class="form-control input-box" id="goldInputHigh"></div>
             <div>
               <i class="fa-solid fa-caret-up icon"></i>
@@ -570,12 +321,12 @@
         </div>
 
         <!-- silver -->
-        <div class="data silver">
+        <div class="gold">
           <div class=" label">
             <p style="color: #0A1839;">Silver</p>
             <h5 style="color: #0A1839;">oz</h5>
           </div>
-          <div class="buy">
+          <div class="buy-sell">
             <div class="form-control input-box" id="silverInputLow"></div>
             <div>
               <i class="fa-solid fa-caret-down icon"></i>
@@ -583,7 +334,7 @@
             </div>
           </div>
 
-          <div class="sell">
+          <div class="buy-sell">
             <div class="form-control input-box" id="silverInputHigh"></div>
             <div>
               <i class="fa-solid fa-caret-up icon"></i>
