@@ -52,7 +52,6 @@ let askSpread,
 let goldData = {};
 let silverData = {};
 
-
 //
 async function fetchData() {
     socket.on("market-data", (data) => {
@@ -99,10 +98,7 @@ async function fetchData() {
 
 // Function to Fetch Gold API Data
 async function fetchData1() {
- 
-
   try {
-   
     var currentGoldBuy = goldBuy;
     var currentGoldSell = goldSell;
     var currentSilverBuy = silverBuy;
@@ -311,7 +307,6 @@ async function showTable() {
             <td>${unitInput} ${weightInput}</td>
             <td id="buyAED">0</td>
             <td id="sellAED">0</td>
-            
             `;
 
       // Append the new row to the table body
